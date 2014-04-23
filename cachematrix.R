@@ -14,8 +14,8 @@ makeCacheMatrix <- function(x = matrix()) {
         x
     }
     
-    solveInverse <- function() {
-        inverse <<- solve(x)
+    solveInverse <- function(...) {
+        inverse <<- solve(x, ...)
         inverse
     }
     
@@ -40,5 +40,5 @@ cacheSolve <- function(x, ...) {
         return(inverse)
     }
     
-    x$solveInverse()
+    x$solveInverse(...)
 }
